@@ -1,0 +1,26 @@
+<html>
+
+<head>
+    <title>ARIA details test 3</title>
+
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <h2>
+        (3) <code>img</code> HTML tag with <code>aria-details</code> attribute pointing to immediately-following <code>details</code>        element, containing a hyperlink to an external description document
+    </h2>
+
+    <img src="http://www.daisy.org/images-site2/logos/daisy.png" alt="DAISY logo" aria-details="details" />
+
+    <details id="details">
+        <summary>
+            Image description (click to expand)
+        </summary>
+        Follow <a target="_BLANK" href="http://daisy.org">this link</a> to open an external document that describes the above
+        image.
+    </details>
+
+</body>
+
+</html>

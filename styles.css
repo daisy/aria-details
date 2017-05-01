@@ -1,0 +1,25 @@
+
+body {
+    margin-top: 2em;
+    margin-right: 2em;
+    margin-left: 2em;
+    margin-bottom: 10em;
+}
+
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+    font-size: 150%;
+}
+
+td {
+    padding: 1em;
+}
+
+:target {
+    border: 1px dotted blue;
+}
+
+summary {
+    border: 2px solid black;
+}

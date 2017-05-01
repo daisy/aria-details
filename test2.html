@@ -1,0 +1,41 @@
+<html>
+
+<head>
+    <title>ARIA details test 2</title>
+
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <h2>
+        (2) HTML <code>table</code> with <code>aria-details</code> attribute pointing to an immediately-following <code>details</code>        element
+    </h2>
+    <table aria-details="details" border="1">
+        <tr>
+            <td>
+                cell 1
+            </td>
+            <td>
+                cell 2
+            </td>
+        </tr>
+        <tr>
+            <td>
+                cell 3
+            </td>
+            <td>
+                cell 4
+            </td>
+        </tr>
+    </table>
+
+    <details id="details">
+        <summary>
+            Table description (click to expand)
+        </summary>
+        This is the table description (any HTML markup is valid here).
+    </details>
+
+</body>
+
+</html>
