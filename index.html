@@ -14,6 +14,12 @@
     </h1>
 
     <p>
+        The source HTML and CSS code for this website is located in the following GitHub repository: https://github.com/daisy/aria-details/tree/master
+        Contributions welcome! Please file issues here: https://github.com/daisy/aria-details/issues ... and/or propose changes
+        here: https://github.com/daisy/aria-details/pulls
+    </p>
+
+    <p>
         Note that these examples do <em>not</em> represent authoritative good practices for content production. This is merely
         braintorming material to support the ongoing discussion regarding accessible extended descriptions for images and
         other complex information structures (such as HTML tables). Also note that these examples are intentionally poorly-styled
@@ -33,8 +39,9 @@
         image), the description summary and full content are reached by simply following the linear reading order. This is
         accessible to both mainstream users (e.g. visually) and users of assistive technologies (e.g. via synthetic speech
         / screen readers). The <code>aria-details</code> attribute in the described object (e.g. the source image HTML tag
-        / element) references the immediately-following <code>details</code> element, and provides additional semantic information
-        in the accessibility tree that assistive technologies (such as screen readers) use to help user navigate content.
+        / element) references the immediately-following <code>details</code> element, and as such provides additional semantic
+        information in the accessibility tree that assistive technologies (such as screen readers) rely on to help users
+        navigate content.
     </p>
     <p>
         When the <code>details</code> element is located away from the described object (e.g. at the end of the HTML document,
@@ -44,9 +51,9 @@
         <code>aria-details</code> attribute is only exposed to users of assistive technologies, there must be an additional
         "fallback" affordance (such as a regular HTML link) located near the described object. Although such link needs to
         be visible to mainstream users, it may be styled discretely to avoid cluttering the information stream. Note that
-        in the case of HTML tables which are content-rich, it may be preferable to include a description link immediately
-        before the table, rather than immediately after it. Otherwise, users would be forced to scan-read the entire table
-        content in order to reach the description link.
+        in the case of HTML tables which are typically content-rich, it may be preferable to include a description link immediately
+        before the table, rather than immediately after it. Otherwise, users would be forced to skip the entire table (rows
+        and columns) in order to reach the description link.
     </p>
 
     <h2>
