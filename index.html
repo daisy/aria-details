@@ -1,12 +1,54 @@
 <html>
 
 <head>
-    <title>ARIA details tests</title>
+    <title>ARIA details examples</title>
 
     <link href="styles.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
+    <h1>
+        Accessible extended descriptions: HTML documents that demonstrate usage scenarios for the
+        <code>aria-details</code> attribute combined with the
+        <code>details</code> (and associated <code>summary</code>) elements.
+    </h1>
+
+    <p>
+        Note that these examples do <em>not</em> represent authoritative good practices for content production. This is merely
+        braintorming material to support the ongoing discussion regarding accessible extended descriptions for images and
+        other complex information structures (such as HTML tables). Also note that these examples are intentionally poorly-styled
+        (no fancy CSS), in order to put emphasis on structure and semantics. The goal is to express a generic model that
+        provides flexibility in terms of actual aesthetics. Eventually, this research work may lead to a more formal recommendation
+        for content creators / publishers.
+    </p>
+    <p>
+        The <code>details</code> (and associated <code>summary</code>) elements contain the actual description. The default
+        collapsed / closed state of the <code>details</code> element means that only the <code>summary</code> "label" is
+        visible. The user can choose to expand / open the <code>details</code> element in order to reveal the full description
+        content (which itself may contain a hyperlink to further external content). The process of expanding / collapsing
+        the <code>details</code> element is keyboard-accessible and generally well-supported in modern web browsers.
+    </p>
+    <p>
+        When the <code>details</code> element is located immediately after the described object (e.g. immediately below an
+        image), the description summary and full content are reached by simply following the linear reading order. This is
+        accessible to both mainstream users (e.g. visually) and users of assistive technologies (e.g. via synthetic speech
+        / screen readers). The <code>aria-details</code> attribute in the described object (e.g. the source image HTML tag
+        / element) references the immediately-following <code>details</code> element, and provides additional semantic information
+        in the accessibility tree that assistive technologies (such as screen readers) use to help user navigate content.
+    </p>
+    <p>
+        When the <code>details</code> element is located away from the described object (e.g. at the end of the HTML document,
+        in the form of a "footnote" ), simply following the linear reading order is not an adequate user experience. Instead,
+        there must be a link to allow the user to jump from the described object into the description, and there must be
+        a "link back" mechanism in order to resume reading from the described object. Because the
+        <code>aria-details</code> attribute is only exposed to users of assistive technologies, there must be an additional
+        "fallback" affordance (such as a regular HTML link) located near the described object. Although such link needs to
+        be visible to mainstream users, it may be styled discretely to avoid cluttering the information stream. Note that
+        in the case of HTML tables which are content-rich, it may be preferable to include a description link immediately
+        before the table, rather than immediately after it. Otherwise, users would be forced to scan-read the entire table
+        content in order to reach the description link.
+    </p>
+
     <h2>
         <a href="test1.html">
             (1) <code>img</code> HTML tag with <code>aria-details</code> attribute pointing to an immediately-following <code>details</code>        element        
