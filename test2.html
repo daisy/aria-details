@@ -11,12 +11,19 @@
         (2) HTML <code>table</code> with <code>aria-details</code> attribute pointing to an immediately-following <code>details</code>        element
     </h2>
     <table aria-details="details" border="1">
+        <caption>My data table</caption>
         <tr>
             <td>
                 cell 1
             </td>
             <td>
                 cell 2
+            </td>
+            <td>
+                cell a
+            </td>
+            <td>
+                cell b
             </td>
         </tr>
         <tr>
@@ -26,12 +33,46 @@
             <td>
                 cell 4
             </td>
+            <td>
+                cell c
+            </td>
+            <td>
+                cell d
+            </td>
+        </tr>
+        <tr>
+            <td>
+                cell 5
+            </td>
+            <td>
+                cell 6
+            </td>
+            <td>
+                cell e
+            </td>
+            <td>
+                cell f
+            </td>
+        </tr>
+        <tr>
+            <td>
+                cell 7
+            </td>
+            <td>
+                cell 8
+            </td>
+            <td>
+                cell g
+            </td>
+            <td>
+                cell h
+            </td>
         </tr>
     </table>
 
     <details id="details">
         <summary>
-            Table description (click to expand)
+            Description
         </summary>
         This is the table description (any HTML markup is valid here).
     </details>

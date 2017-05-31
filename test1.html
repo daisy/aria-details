@@ -11,11 +11,14 @@
         (1) <code>img</code> HTML tag with <code>aria-details</code> attribute pointing to an immediately-following <code>details</code>        element
     </h2>
 
-    <img src="http://www.daisy.org/images-site2/logos/daisy.png" alt="DAISY logo" aria-details="details" />
+    <figure id="image">
+        <img src="http://www.daisy.org/images-site2/logos/daisy.png" alt="DAISY logo" aria-details="details" />
+        <figcaption>My image</figcaption>
+    </figure>
 
     <details id="details">
         <summary>
-            Image description (click to expand)
+            Description
         </summary>
         This is the image description (any HTML markup is valid here).
     </details>
