@@ -9,7 +9,6 @@ body {
 table {
     border-spacing: 0;
     border-collapse: collapse;
-    font-size: 150%;
 }
 
 td {
@@ -22,4 +21,10 @@ td {
 
 summary {
     border: 2px solid black;
+}
+
+caption, .caption {
+    font-size: 80%;
+    caption-side: top;
+    text-align: left;
 }
