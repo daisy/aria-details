@@ -1,21 +1,21 @@
 <html>
 
 <head>
-    <title>ARIA details test 4</title>
+    <title>ARIA details test 7</title>
 
     <link href="styles.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
     <h2>
-        (4) <code>img</code> HTML tag with <code>aria-details</code> attribute as well as fallback discrete HTML link (located
-        immediately below the image) pointing to a distant <code>details</code> element (located at the end of the document),
-        which contains a link to navigate from the extended description back to the described image.
+        (7) <code>img</code> HTML tag with <code>aria-details</code> attribute as well as fallback visually-offscreen but
+        keyboard-focusable HTML link (located in the markup source immediately below the image) pointing to a distant <code>details</code>        element (located at the end of the document), also visually-offscreen and keyboard-focusable, containing a link to
+        navigate from the extended description back to the described image.
     </h2>
 
     <figure id="image">
         <img src="http://www.daisy.org/images-site2/logos/daisy.png" alt="DAISY logo" aria-details="details" />
-        <figcaption>My image - <a href="#details">Description</a></figcaption>
+        <figcaption>My image<a href="#details" class="offscreen"> Description</a></figcaption>
     </figure>
 
     <p>The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over
@@ -54,7 +54,7 @@
     <p>The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over
         the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.</p>
 
-    <details id="details">
+    <details id="details" class="offscreen">
         <summary>
             Image description (click to expand)
         </summary>

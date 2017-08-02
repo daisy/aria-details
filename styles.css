@@ -28,3 +28,13 @@ caption, .caption, figcaption {
     caption-side: top;
     text-align: left;
 }
+
+.offscreen {
+    display: block;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    left: -20px;
+    top: -20px;
+    overflow: hidden;
+}
