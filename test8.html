@@ -4,6 +4,31 @@
     <title>ARIA details test 8</title>
 
     <link href="styles.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function (event) {
+            var links = document.querySelectorAll("a.detailsLink");
+            for (var i = 0; i < links.length; i++) {
+                var link = links[i];
+                link.addEventListener("click", function (event) {
+                    var details = document.querySelectorAll(".details");
+                    for (var j = 0; j < details.length; j++) {
+                        var detail = details[j];
+                        var id = detail.getAttribute("id");
+                        var href = event.target.getAttribute("href");
+                        var focused = (href === ("#" + id));
+                        console.log("----");
+                        console.log(id + " / " + href + " // " + focused);
+                        if (focused) {
+                            detail.setAttribute("open", "open");
+                        } else {
+                            detail.removeAttribute("open");
+                        }
+                    }
+                });
+            }
+        });
+    </script>
 </head>
 
 <body style="max-width: 40em;">
@@ -27,7 +52,7 @@
         <img src="test8_Blastulation.png" alt="Blastulation" aria-details="details1" />
         <figcaption>The morula (1) continues to undergo cell divisions. As it does, cells start to migrate into separate layers, and
             a cavity starts to develop inside the ball of cells. When cells have migrated into distinct layers, the organism
-            is called a blastocyst (2).<br><a href="#details1">Read extended description</a>
+            is called a blastocyst (2).<br><a class="detailsLink" href="#details1">Read extended description</a>
         </figcaption>
     </figure>
 
@@ -42,7 +67,7 @@
     <figure id="image2">
         <img src="test8_Blastocyst.png" alt="Blastocyst" aria-details="details2" />
         <figcaption>Figure shows the two layers of the ball shaped blastocyst. The outer layer is the trophoblast. Inside the blastocyst
-            cavity is the inner cell mass (embryoblast).<br><a href="#details2">Read extended description</a>
+            cavity is the inner cell mass (embryoblast).<br><a class="detailsLink" href="#details2">Read extended description</a>
         </figcaption>
     </figure>
 
@@ -68,7 +93,7 @@
 
     <h3>Appendix: extended image descriptions</h3>
 
-    <details id="details1">
+    <details class="details" id="details1">
         <summary>
             "Blastulation" (click to expand)
         </summary>
@@ -79,7 +104,7 @@
         <p><a href="#image1">Navigate back to the "Blastulation" image.</a></p>
     </details>
     <hr>
-    <details id="details2">
+    <details class="details" id="details2">
         <summary>
             "Blastocyst" (click to expand)
         </summary>
