@@ -56,11 +56,16 @@
         and columns) in order to reach the description link.
     </p>
     <p>
-        It is also possible to use the <code>aria-hidden</code> attribute in order to make some content (let's call this
+        <span style="color: red;">[REMOVED]</span> (only the "visually offscren" technique is recommended, not 'aria-hidden') It is also possible to use the <code>aria-hidden</code> attribute in order to make some content (let's call this
         "CONTENT A") inaccessible by screen readers and other assistive technologies. This can be used in conjunction with
         an "offscreen" CSS class which defines styling to visually hide content from view (let's call this "CONTENT B") whilst
         maintaining keyboard focusability. This way, "CONTENT A" and "CONTENT B" become mutually-exclusive depending on whether
         the user relies on assistive technology.
+    </p>
+    <p>
+        It is also possible to use 
+        an "offscreen" CSS class which defines styling to visually hide content from view whilst
+        maintaining keyboard focusability, and ensuring accessibility via assistive technologies such as screen readers.
     </p>
 
     <h2>
@@ -94,8 +99,7 @@
     </h2>
     <h2>
         <a href="test6.html">
-        (6) <code>img</code> HTML tag with <code>aria-hidden</code> attribute (invisible to screen readers and other assistive
-        technologies), and an immediately-following <code>details</code> element positioned off-screen (visually hidden but
+        (6) <code>img</code> HTML tag with an immediately-following <code>details</code> element positioned off-screen (visually hidden but
         keyboard-focusable, therefore accessible to screen readers and other assistive technologies).
         </a>
     </h2>
