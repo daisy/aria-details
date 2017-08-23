@@ -29,6 +29,10 @@ caption, .caption, figcaption {
     text-align: left;
 }
 
+thead td {
+    font-weight: bold;
+}
+
 .offscreen {
     display: block;
     width: 10px;
