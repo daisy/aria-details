@@ -1,0 +1,25 @@
+<html>
+
+<head>
+    <title>ARIA details test 9</title>
+
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <h2>
+        (9) <code>img</code> HTML tag with <code>aria-details</code> attribute pointing to an offscreen (using CSS) <code>div</code> element that has a
+        <code>role</code> attribute with the <code>region</code> value, and an <code>aria-label</code> attribute that says "Description".
+    </h2>
+
+    <figure id="image">
+        <img src="http://www.daisy.org/images-site2/logos/daisy.png" alt="DAISY logo" aria-details="details" />
+        <figcaption>My image optional figcation</figcaption>
+        <div id="details" class="offscreen" role="region" aria-label="Description">
+                This is the contents of the extended image description.
+        </div>    
+    </figure>
+
+</body>
+
+</html>
