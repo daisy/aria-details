@@ -1,5 +1,6 @@
-<html>
-
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>ARIA details test 9</title>
 
@@ -13,11 +14,12 @@
     </h2>
 
     <figure id="image">
-        <img src="http://www.daisy.org/images-site2/logos/daisy.png" alt="DAISY logo" aria-details="details" />
-        <figcaption>My image optional figcation</figcaption>
+        <img src="daisy.png" alt="DAISY logo" aria-details="details" />
+        <figcaption>
         <div id="details" class="offscreen" role="region" aria-label="Description">
-                This is the contents of the extended image description.
-        </div>    
+            This is the contents of the extended image description.
+    </div>    
+        </figcaption>
     </figure>
 
 </body>
